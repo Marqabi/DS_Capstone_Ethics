@@ -14,7 +14,16 @@ The data collected multiple weather parameters for 13 regions of Saudi Arabia. T
 
 **Regions included**: 
 
-
-unique(mydata$city)
-
-"Qassim"           "Hail"            "Madina"           "EP"              "Riyadh"           "Mecca"            "Tabuk"            "Assir"           "Northern boarder" "Jazan"           "Najran"           "Baha"            "Jawf"            
+* Qassim
+* Hail
+* Madina
+* EP
+* Riyadh
+* Mecca
+* Tabuk
+* Assir
+* Northern boarder
+* Jazan
+* Najran
+* Baha
+* Jawf
