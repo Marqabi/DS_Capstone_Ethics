@@ -13,11 +13,14 @@ library(markdown)
 library(MASS)
 ```
 
-<!--
-# Description of your package
+# Introduction
+The Ethics R package aims to bridge the gap between ethics and the R working environment. The package provides tips and comments on data sets and models that highlights any ethical issues, biases or any tips on how to improve the models further.
 
-This will fill the description of your package.
---> 
+# The goal
+The goal is to have this package open sourced for others to add comments and tips on different data sets, models and more. This will make this package a library of ethics accessible easily for any R user
+
+# Purpose
+During the DS boot camp, the Boston housing data set was talked about with its biases and ethical issues it has. However, if a new data scientist worked with the data set without being informed about its issues it might lead to wrong correlations and conclusions. To solve problems similar to this, it would be fast and convenient to have these information and tips on the R environment to check quickly whenever needed.
 
 ```{r description, eval=FALSE}
 # Describe your package
@@ -36,7 +39,12 @@ fusen::fill_description(
 usethis::use_mit_license("Abdullah Almarqabi")
 ```
 
-# Read data
+# Creating the package
+The package was created with the help of the "Fusen" package. Fusen helps in creating packages easily from a simple markdown file. 
+
+
+# Functionality
+Currently, the package has two functions. The "ethics" function, which provides short comments and tips. Secondly, the "ethics_long" function that displays a detailed markdown file on the ethics of the input. Since the package is still a work in progress, for data sets, the package is applicable on the Boston data set. Furthermore, it gives comments on Linear models and Logistic models.
 
 <!-- Store your dataset in a directory named "inst/" at the root of your project -->
 <!-- Use it for your tests in this Rmd thanks to `load_all()` to make it available
@@ -57,7 +65,7 @@ pkgload::load_all(path = here::here(), export_all = FALSE)
 ```
 
 
-# Short ethics comments and tips
+# Function 1: Short ethics comments and tips
 
 ```{r function}
 #' ethics
@@ -109,18 +117,14 @@ For more details use (ethics_long) function")
 
 ```
 
+# Example
 ```{r examples}
 ethics(Boston)
 ```
 
-```{r tests}
-test_that("my_median works properly and show error if needed", {
-  expect_true(my_median(1:12) == 6.5)
-  expect_error(my_median("text"))
-})
-```
 
-# Detailed ethics comments
+
+# Function 2: Detailed ethics comments
 
 ```{r function-1}
 #' Detailed ethics comments
@@ -154,12 +158,6 @@ ethics_long <- function(x)
 
 ```
 
-```{r tests-1}
-test_that("my_median works properly and show error if needed", {
-  expect_true(my_other_median(1:12) == 6.5)
-  expect_error(my_other_median("text"))
-})
-```
 
 
 
@@ -170,8 +168,15 @@ test_that("my_median works properly and show error if needed", {
 fusen::inflate(rmd = "dev/dev_history.Rmd")
 ```
 
+# Conclusion
+There is a need to bridge the gap between ethics and writing code. To bridge this gap, the Ethics package provides these tips on any ethical concerns or ways to decrease the biases and improve the accuracy of a model. However, there are still huge rooms for improvements and additions for this package to be generalizable and easy to use for everyone.
 
-# Inflate your package
+# Limitations & Future devolopements
+* More data sets need to be included in the package.
+* The package needs to be able to read the specific model and give personal tips on how to improve it.
+* Comments on graphs and plots need to be added for example
+
+<!-- # Inflate your package
 
 You're one inflate from paper to box.
 Build your package from this very Rmd using `fusen::inflate()`
@@ -179,4 +184,4 @@ Build your package from this very Rmd using `fusen::inflate()`
 - Verify your `"DESCRIPTION"` file has been updated
 - Verify your function is in `"R/"` directory
 - Verify your test is in `"tests/testthat/"` directory
-- Verify this Rmd appears in `"vignettes/"` directory
+- Verify this Rmd appears in `"vignettes/"` directory -->
