@@ -1,0 +1,43 @@
+---
+title: "Boston"
+author: "Abdullah Almarqabi"
+date: "11/9/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+The Boston housing data set Contains information collected in 1970 by the U.S. Census Service around Boston, Massachusetts, and first appearing in a 1978 publication [1].
+
+
+## Quick look
+
+
+```{r cars}
+library(MASS)
+data("Boston")
+summary(Boston)
+```
+
+## Sources of bias
+
+The variable called "black" is calculated using the formula  B = 1000(Bk – 0.63)2 where Bk is the proportion of Black people per town.
+
+With this variable, even doing simple data exploration like measuring the correlations between variables might suggest a relation between house prices and the proportion of black people in an area.
+
+While not meaning to racially profile neighborhoods, this outdated data set might lead to racist interpretations without understanding the historical contexts.
+
+
+
+## References
+
+
+[1] Harrison, D. and Rubinfeld, D.L. Hedonic prices and the demand for clean air, J. Environ. Economics & Management, vol.5, 81-102, 1978
+
+
+
+
