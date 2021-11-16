@@ -20,7 +20,7 @@ The package was created with the help of the "Fusen" package. Fusen helps in cre
 
 ## Limitations & Future devolopements
 * More data sets need to be discussed in the package.
-* The package needs to be able to git into the specific model provided and give personal tips on how to improve it.
+* The package needs to be able to get into the specific model provided and give personal tips on how to improve it.
 * Comments on ethics on graphs and plots for example need to be added.
 * The function codes themselves needs more adjustments and testing.
 
