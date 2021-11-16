@@ -76,8 +76,7 @@ pkgload::load_all(path = here::here(), export_all = FALSE)
 #' @return
 #' Comments and guidelines
 #' @export
-#'
-#' @examples
+#' @example
 ethics <- function(x) 
 {
   if(class(x) =='lm')
@@ -87,7 +86,7 @@ ethics <- function(x)
 Tips for linear models: 
 - Check for collinearity. It can be difficult to separate out the individual effects of collinear variables on the response. collinearity can cause predictor variables to appear as statistically insignificant when in fact they are significant.
 
-- Make sure there is no multi-colinearity. multicollinearity can arise when one feature is linearly related to two or more features. If present, implement PCR.")
+- If collinearity or multicollinearity are present, you can implement Principal Component Regression PCR.")
     }
        else if(class(x) =='glm')
     {
@@ -119,6 +118,7 @@ For more details use (ethics_long) function")
 
 # Example
 ```{r examples}
+library(Ethics)
 ethics(Boston)
 ```
 
@@ -135,13 +135,12 @@ ethics(Boston)
 #' @return
 #' Opens markdown file
 #' @export
-#'
-#' @examples
+#' @example
 ethics_long <- function(x) 
 {
   if(x== Boston || x=="Boston" )
       {
-      rmarkdown::run("dev/Boston.Rmd")
+      rmarkdown::run("Boston.Rmd")
       
     }
   else 
@@ -155,7 +154,7 @@ ethics_long <- function(x)
 ```
 
 ```{r examples-1}
-
+ethics_long(Boston)
 ```
 
 
@@ -169,7 +168,7 @@ fusen::inflate(rmd = "dev/dev_history.Rmd")
 ```
 
 # Conclusion
-There is a need to bridge the gap between ethics and writing code. To bridge this gap, the Ethics package provides these tips on any ethical concerns or ways to decrease the biases and improve the accuracy of a model. However, there are still huge rooms for improvements and additions for this package to be generalizable and easy to use for everyone.
+In conclusion, there is a need to bridge the gap between ethics and writing code. To bridge this gap, the Ethics package provides these tips on any ethical concerns or ways to decrease the biases and improve the accuracy of a model. However, there are still huge rooms for improvements and additions for this package to be generalizable and easy to use for everyone.
 
 # Limitations & Future devolopements
 * More data sets need to be included in the package.
